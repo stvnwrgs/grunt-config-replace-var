@@ -10,7 +10,7 @@
 var fs = require('fs');
 
 module.exports = function(grunt) {
-  var prompt = require('./lib/prompter.js');
+ // var prompt = require('./lib/prompter.js');
   var repl = require('./../node_modules/simple-replace');
 
   grunt.registerMultiTask('config_replace_var', 'This plugin helps to replace vars from template files. You can use it for your config files or credential files. You can use it as step by step prompt or parameterized', function(param) {
