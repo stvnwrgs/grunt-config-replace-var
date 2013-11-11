@@ -27,10 +27,7 @@ module.exports = function(grunt) {
       this.files.forEach(function (file){
         var src = file.orig.src[0];
         var data = fs.readFileSync(src , {encoding:'utf8'});
-        console.log(data);
-        console.log(args);
-        console.log(repl(data,args));
-        //fs.writeFileSync(src + "asd", repl(data,args));
+        fs.writeFileSync(src.substr(0,src.length-4), repl(data,args));
       });
     }
    
